@@ -222,6 +222,23 @@ def user_stats(df):
     print('-'*40)
 
 
+def raw_data(df):
+    # Display raw data if users wants
+    ask_data = input("\nWould you like to see the raw data? Y/N \n").lower()
+    if ask_data.lower() == 'yes' or 'y':
+        i = 0
+        while True:
+            print(df.iloc[i:i + 5])
+            i += 5
+            ask_more = input("Do you want to see more data? Y/N ").lower()
+            if ask_more != 'yes' or 'y':
+                print(ask_more)
+                break
+
+    else:
+        print("NO DATA")
+
+
 def main():
     while True:
         city, month, day = get_filters()
