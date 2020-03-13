@@ -221,6 +221,7 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+    #Adding some comments to satisfy course requirements
 
 def main():
     while True:
@@ -230,6 +231,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
+
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
